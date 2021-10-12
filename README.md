@@ -1,0 +1,2 @@
+# Password-Manager-using-python
+Hello guys Myself Krishna Kumar, this is a passward manager program in which we are going to save our  1)name of site 2)username  3)passward in our pc as a text file without storing it on the third party storage  in a encryted cipher form so that when we open that text it is safe that our password and sensitive data  will not be in a understandable format and we can authenticate  and view our passwords username of multiple site at ease
