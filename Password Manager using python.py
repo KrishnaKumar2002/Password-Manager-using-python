@@ -9,19 +9,19 @@
 #           will not be in a understandable format and we can authenticate 
 #           and view our passwords username of multiple site at ease
 
-def encrypt(data,shift):
+def encrypt(data,shift1):
     encrypted=""
 
     for i in range(len(data)):
         char=data[i]
         if(char.isupper()):
-            encrypted+=char((ord(char)+shift-65)%26+65)
+            encrypted+=(char((ord(char)+shift1-65)%26+65))
 
         elif(char.islower()):
-            encrypted+=char((ord(char)+shift-97)%26+97)
+            encrypted+=(char((ord(char)+shift1-97)%26+97))
 
         elif(char.isdigit()):
-            number=(int(char)+shift)%10
+            number=(int(char)+shift1)%10
             encrypted+=str(number)
 
         else:
@@ -31,19 +31,19 @@ def encrypt(data,shift):
 
 
 
-def decrypt(data,shift):
+def decrypt(data,shift2):
     decrypted=""
 
     for i in range(len(data)):
         char=data[i]
         if(char.isupper()):
-            decrypted+=char((ord(char)-shift-65)%26+65)
+            decrypted+=char((ord(char)-shift2-65)%26+65)
 
         elif(char.islower()):
-            decrypted+=char((ord(char)-shift-97)%26+97)
+            decrypted+=char((ord(char)-shift2-97)%26+97)
 
         elif(char.isdigit()):
-            number=(int(char)-shift)%10
+            number=(int(char)-shift2)%10
             decrypted+=str(number)
 
         else:
@@ -73,6 +73,7 @@ elif menu=='2':
         shift=6
         data=i.split(";|")
         print(decrypt(data[0],shift)+'\t\t'+decrypt(data[1],shift)+'\t\t'+decrypt(data[2],shift))
-        
+
+
 else:
     exit()
