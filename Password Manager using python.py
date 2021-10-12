@@ -52,8 +52,8 @@ def decrypt(data,shift):
     return decrypted
 
 
-menu=""
-while menu!='1' or menu!='2':
+menu=''
+if menu!='1' or menu!='2':
     menu=input("would you like to save or view the login info \n 1)save new login info \n 2)view our login info \n 3)exit")
 
 if menu=='1':
