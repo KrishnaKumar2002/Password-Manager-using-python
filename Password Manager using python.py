@@ -58,7 +58,7 @@ while menu!='1' or menu!='2':
 
 if menu=='1':
     softwareName=input("Enter the name of the software")
-    username=input("Enter the Password for the software")
+    username=input("Enter the Username for the software")
     password=input("Enter the password for the software")
     shift=6
     file=open("securePasswordData.txt",'a')
@@ -73,7 +73,6 @@ elif menu=='2':
         shift=6
         data=i.split(";|")
         print(decrypt(data[0],shift)+'\t\t'+decrypt(data[1],shift)+'\t\t'+decrypt(data[2],shift))
-
-
+        
 else:
     exit()
